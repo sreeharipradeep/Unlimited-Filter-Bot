@@ -1,24 +1,30 @@
 import os
-import pyrogram
+from pyrogram import Client
 
-if bool(os.environ.get("WEBHOOK", False)):
-    from sample_config import Config
-else:
-    from config import Config
+# Always import config
+from config import Config
 
 
+if __name__ == "__main__":
 
-if __name__ == "__main__" :
     plugins = dict(
         root="plugins"
     )
-    app = pyrogram.Client(
-        "filter bot",
+
+    app = Client(
+        name="filter_bot",
         bot_token=Config.TG_BOT_TOKEN,
         api_id=Config.API_ID,
         api_hash=Config.API_HASH,
         plugins=plugins,
-        workers=300
+        workers=100
     )
-    Config.AUTH_USERS.add(str(680815375))
+
+    # Safe AUTH_USERS handling
+    try:
+        Config.AUTH_USERS.add(str(680815375))
+    except AttributeError:
+        pass
+
+    print("Bot started successfully...")
     app.run()
