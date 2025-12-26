@@ -1,11 +1,17 @@
 class Script(object):
 
-    START_MSG = """<b>Hy {},
+    START_MSG = """<b>🍿 Welcome! 🍿</b>
 
-I'm an advanced filter bot with many capabilities!
-There is no practical limits for my filtering capacity :)
+I am the filter bot of the <b>Trixel Movie</b> group 🎬.
+You can add me to your channel or group and use me.
 
-See <i>/help</i> for commands and more details.</b>
+<b>🍿 സ്വാഗതം! 🍿</b>
+
+ഞാൻ <b>Trixel Movie</b> 🎬 ഗ്രൂപ്പിന്റെ ഫിൽട്ടർ ബോട്ട് ആണ്.
+നിങ്ങൾ എന്നെ നിങ്ങളുടെ <b>Channel / Group</b>-ൽ add ചെയ്ത്
+use ചെയ്യാവുന്നതാണ് ☺️
+
+Use <i>/help</i> to see all commands.
 """
 
 
